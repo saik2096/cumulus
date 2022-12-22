@@ -1,0 +1,22 @@
+minimum_cumulusci_version: '3.70.0'
+project:
+    name: cumulus
+    package:
+        name: cumulus
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cumulus/tests
+            options:
+                outputdir: robot/cumulus/results
+
+    robot_testdoc:
+        options:
+            path: robot/cumulus/tests
+            output: robot/cumulus/doc/cumulus_tests.html
+
